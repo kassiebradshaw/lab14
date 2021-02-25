@@ -40,19 +40,21 @@ function handleSubmit(event) {
 // DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // DONE: suss out the item picked from the select list
-  let item = document.getElementById('items').value;
-  console.log(item);
+  let product = document.getElementById('items').value;
+  console.log(product);
 
   // DONE: get the quantity
   let quantity = document.getElementById('quantity').value;
   console.log(quantity);
   // TODO: using those, add one item to the Cart
-  cart.addItem(item, quantity);
+  cart.addItem(product, quantity);
   // how do we push the item and the quantity into the cart array declared at the top?
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
+
+  console.log('cart.items.length', cart.items.length);
   document.getElementById('itemCount').textContent = `:  ${cart.items.length} item(s) in cart`;
 }
 
